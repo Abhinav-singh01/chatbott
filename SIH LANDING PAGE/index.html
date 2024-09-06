@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="list">
+                <ul>
+                    <li><button onclick="openHome()"><span>Home</span><i></i></button></li>
+                    <li><button onclick="openAbout()"><span>About</span><i></i></button></li>
+                </ul>
+            </div>
+            <div class="list">
+                <ul>
+                    <li><button onclick="openContact()"><span>Contact</span><i></i></button></li>
+                    <li><button onclick="openLogin()"><span>Log In</span><i></i></button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <p>Hi There, I'm</p>
+        <div class="animation-container">
+            <div class="first-animation"><span><AI-DRIVEN>AI-DRIVEN</span></div>
+            <div class="second-animation"><span>CHATBOT</span></div>
+        </div>
+    </div>
+    
+    <div class="info">
+        <p>This chatbot will assist employees by addressing queries related to HR policies, IT support, and company events. It can be implemented by fine-tuning Llama 3 or using Gemini's API for real-time inference.</p>
+        <p>This chatbot will handle document-related queries, such as summarizing and extracting keywords from uploaded documents. It will use Retrieval-Augmented Generation (RAG) to extract and store document content. If the document isn't text-based, Optical Character Recognition (OCR) will be used for text extraction.</p>
+        <div class="btn1"><button onclick="openModal()" class="btn-follow btn-card"><div>ASK ME</div></button></div>
+    </div>
+
+    <!-- Modal Container -->
+    <div class="outlay" id="outlay" onclick="closeModal()"></div>
+    <div class="modal" id="modal">
+        <div class="chat-container">
+            <!-- Heading added here -->
+            <div class="chat-header"><h2>Chat Box</h2></div>
+            <div class="chat-box" id="chatBox">
+                <div class="message"><div class="user">User:</div><div class="text">Hello! How are you?</div></div>
+                <div class="message"><div class="user">Bot:</div><div class="text">I'm great, thank you! How can I assist you today?</div></div>
+            </div>
+            <div class="input-area">
+                <i class="ri-links-line"></i>
+                <input type="text" id="messageInput" placeholder="Type a message...">
+                <button  class="send" id="sendButton">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Container -->
+    <div class="login-container" id="loginContainer">
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="login" method="post">
+                <div class="textbox"><input type="text" placeholder="Username" name="username" required></div>
+                <div class="textbox"><input type="password" placeholder="Password" name="password" required></div>
+                <input type="submit" class="btn" value="Login">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Company</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
